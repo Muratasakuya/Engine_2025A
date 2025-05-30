@@ -1,0 +1,11 @@
+{
+    "FileType": "ParticleEmitter",
+    "particleNames": {
+        "0": "verticalElectricEffectEmitter_centerCircle.json",
+        "1": "verticalElectricEffectEmitter_centerCircle2.json",
+        "2": "verticalElectricEffectEmitter_centerCircle3.json",
+        "3": "verticalElectricEffectEmitter_electric0.json",
+        "4": "verticalElectricEffectEmitter_electric1.json",
+        "5": "verticalElectricEffectEmitter_electric2.json"
+    }
+}

@@ -17,6 +17,12 @@ EngineInformation:     load texture: effectCircle
 EngineInformation:     load texture: flashLlight
 EngineInformation:     load texture: groundEffect
 EngineInformation:     load texture: smoke
+EngineInformation:     load texture: electric
+EngineInformation:     load texture: electric1
+EngineInformation:     load texture: electric2
+EngineInformation:     load texture: electric3
+EngineInformation:     load texture: starCircle
+EngineInformation:     load texture: starCircle2
 EngineInformation:     load texture: docklands_01_2k
 EngineInformation:     load model: cube
 EngineInformation:     load texture: axis
@@ -28,6 +34,9 @@ EngineInformation:     load model: groundPlane
 EngineInformation:     load model: crossPlane
 EngineInformation:     load texture: circle4
 EngineInformation:     load model: hitLine
+EngineInformation:     load model: groundRing
+EngineInformation:     load model: verticalRing
+EngineInformation:     load model: verticalPlane
 EngineInformation:     load model: playerBody
 EngineInformation:     load model: playerLeftHand
 EngineInformation:     load model: playerRightHand

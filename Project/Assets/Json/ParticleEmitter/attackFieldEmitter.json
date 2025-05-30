@@ -1,0 +1,7 @@
+{
+    "FileType": "ParticleEmitter",
+    "particleNames": {
+        "0": "attackFieldEmitter_starCircle0.json",
+        "1": "attackFieldEmitter_starCircle2.json"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "FileType": "ParticleEmitter",
+    "particleNames": {
+        "0": "electricEffectEmitter_electric0.json",
+        "1": "electricEffectEmitter_electric1.json",
+        "2": "electricEffectEmitter_electric2.json",
+        "3": "electricEffectEmitter_centerCircle.json",
+        "4": "electricEffectEmitter_centerCircle2.json",
+        "5": "electricEffectEmitter_centerCircle3.json"
+    }
+}

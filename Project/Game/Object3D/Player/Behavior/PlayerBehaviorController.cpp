@@ -49,6 +49,12 @@ void PlayerBehaviorController::Update() {
 	particleSystem->UpdateEmitter("hitEffectEmitter");
 	// dash
 	particleSystem->UpdateEmitter("dashEffectEmitter");
+	// electric
+	particleSystem->UpdateEmitter("electricEffectEmitter");
+	// verticalElectric
+	particleSystem->UpdateEmitter("verticalElectricEffectEmitter");
+	// attackFieldEmitter
+	particleSystem->UpdateEmitter("attackFieldEmitter");
 }
 
 void PlayerBehaviorController::UpdateMove() {

@@ -51,6 +51,8 @@ void BodySecondAttackBehavior::Execute(BasePlayerParts* parts) {
 	// 最後、中心に戻るように左前に行く
 	UpdateReturnCenterStep(parts);
 	UpdateReturnCenterRotation(parts);
+
+	particleSystem_->FrequencyEmit("attackFieldEmitter");
 }
 
 void BodySecondAttackBehavior::UpdateFrontLeftStep(BasePlayerParts* parts) {

@@ -66,6 +66,9 @@ private:
 	Vector3 horizontalRotationAngle_;
 	bool setRotation_; // 値を設定したか
 
+	bool waitParticleStart_;
+	float waitParticle_;
+
 	//--------- functions ----------------------------------------------------
 
 	void UpdateMoveForward(BasePlayerParts* parts);

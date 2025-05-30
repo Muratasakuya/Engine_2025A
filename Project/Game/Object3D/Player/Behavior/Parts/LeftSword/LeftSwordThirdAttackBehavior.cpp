@@ -4,6 +4,7 @@
 //	include
 //============================================================================
 #include <Game/Object3D/Player/Parts/Base/BasePlayerParts.h>
+#include <Engine/Particle/ParticleSystem.h>
 
 //============================================================================
 //  LeftSwordThirdAttackBehavior classMethods
@@ -100,10 +101,28 @@ void LeftSwordThirdAttackBehavior::UpdateRotation(BasePlayerParts* parts) {
 		parts->SetRotate(initRotation);
 
 		rotationAngleY_->Start();
+
+		waitParticleStart_ = true;
 	}
 
 	if (rotationAngleY_->IsFinished()) {
 		return;
+	}
+
+ 	if (waitParticleStart_ && !emitParticle_) {
+
+		waitParticle_ += GameTimer::GetDeltaTime();
+		if (waitParticle_ > 0.2f) {
+
+			// effectを発生させる
+			Vector3 effectPos = parts->GetTransform().GetWorldPos();
+			effectPos += forwardDirection_ * 2.0f;
+			effectPos.x += 0.6f;
+			effectPos.y = 1.2f;
+			particleSystem_->SetTranslate("electricEffectEmitter", effectPos);
+			particleSystem_->Emit("electricEffectEmitter");
+			emitParticle_ = true;
+		}
 	}
 
 	// Y軸回転させる
@@ -180,6 +199,9 @@ void LeftSwordThirdAttackBehavior::Reset() {
 	rotationAngleY_->Reset();
 	moveWaitTimer_ = 0.0f;
 	enableMoveFront_ = false;
+	waitParticleStart_ = false;
+	emitParticle_ = false;
+	waitParticle_ = 0.0f;
 	setRotation_ = false;
 }
 

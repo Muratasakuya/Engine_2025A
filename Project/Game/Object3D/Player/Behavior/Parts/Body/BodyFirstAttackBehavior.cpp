@@ -36,6 +36,8 @@ void BodyFirstAttackBehavior::Execute(BasePlayerParts* parts) {
 	UpdateMoveStraight(parts);
 	// 左後ろに回転したあと正面に向かせる
 	UpdateForwardRightShift(parts);
+
+	particleSystem_->FrequencyEmit("attackFieldEmitter");
 }
 
 void BodyFirstAttackBehavior::UpdateMoveStraight(BasePlayerParts* parts) {

@@ -35,6 +35,12 @@ void GameScene::Load(Asset* asset) {
 	asset->LoadTexture("flashLlight");
 	asset->LoadTexture("groundEffect");
 	asset->LoadTexture("smoke");
+	asset->LoadTexture("electric");
+	asset->LoadTexture("electric1");
+	asset->LoadTexture("electric2");
+	asset->LoadTexture("electric3");
+	asset->LoadTexture("starCircle");
+	asset->LoadTexture("starCircle2");
 	// cubeMap、.dds
 	asset->LoadTexture("docklands_01_2k");
 
@@ -47,6 +53,9 @@ void GameScene::Load(Asset* asset) {
 	asset->LoadModel("groundPlane");
 	asset->LoadModel("crossPlane");
 	asset->LoadModel("hitLine");
+	asset->LoadModel("groundRing");
+	asset->LoadModel("verticalRing");
+	asset->LoadModel("verticalPlane");
 
 	// player
 	asset->LoadModel("playerBody");
@@ -218,6 +227,9 @@ void GameScene::Init(
 	ParticleSystem::GetInstance()->LoadEmitter("fieldEffectEmitter", "fieldEffectEmitter");
 	ParticleSystem::GetInstance()->LoadEmitter("hitEffectEmitter", "hitEffectEmitter");
 	ParticleSystem::GetInstance()->LoadEmitter("dashEffectEmitter", "dashEffectEmitter");
+	ParticleSystem::GetInstance()->LoadEmitter("electricEffectEmitter", "electricEffectEmitter");
+	ParticleSystem::GetInstance()->LoadEmitter("verticalElectricEffectEmitter", "verticalElectricEffectEmitter");
+	ParticleSystem::GetInstance()->LoadEmitter("attackFieldEmitter", "attackFieldEmitter");
 
 	//========================================================================
 	//	postProcess

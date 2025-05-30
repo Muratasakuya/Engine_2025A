@@ -1,7 +1,10 @@
 {
     "FileType": "ParticleEmitter",
     "particleNames": {
-        "0": "expandingCircle.json",
-        "1": "expandingRing.json"
+        "0": "hitEffectEmitter_expandingCircle.json",
+        "1": "hitEffectEmitter_centerSpark.json",
+        "2": "hitEffectEmitter_centerFlashLlight.json",
+        "3": "hitEffectEmitter_diffusionParticle.json",
+        "4": "hitEffectEmitter_centerRing.json"
     }
 }

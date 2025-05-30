@@ -138,7 +138,7 @@ private:
 
 	//--------- variables ----------------------------------------------------
 
-	const float itemWidth_ = 200.0f;
+	float itemWidth_ = 200.0f;
 
 	Asset* asset_;
 

@@ -3,7 +3,7 @@
         "Box": {
             "center": {
                 "x": 0.0,
-                "y": 0.0,
+                "y": 0.20000000298023224,
                 "z": 0.0
             },
             "eulerRotate": {
@@ -12,9 +12,9 @@
                 "z": 0.0
             },
             "size": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 24.0,
+                "y": 4.840000152587891,
+                "z": 24.0
             }
         },
         "Cone": {
@@ -48,12 +48,12 @@
         "Sphere": {
             "center": {
                 "x": 0.0,
-                "y": 3.3499999046325684,
+                "y": 0.0,
                 "z": 0.0
             },
-            "radius": 0.0
+            "radius": 0.20000000298023224
         },
-        "emitterShape": 0
+        "emitterShape": 2
     },
     "Enum": {
         "alphaReferenceEasingType": 0,
@@ -79,11 +79,11 @@
         "reflectGround": false,
         "useNoiseTexture": false,
         "useScaledTime": false,
-        "useUVTransform": false
+        "useUVTransform": true
     },
     "Parameter": {
         "emitCount": {
-            "constant": 1,
+            "constant": 18,
             "randomMax": 1,
             "randomMin": 1,
             "valueType": 0
@@ -138,7 +138,7 @@
         },
         "startColor": {
             "constant": {
-                "a": 1.0,
+                "a": 0.1568627506494522,
                 "b": 1.0,
                 "g": 1.0,
                 "r": 1.0
@@ -263,16 +263,16 @@
                 "z": 1.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 5.0,
+                "y": 5.0,
+                "z": 5.0
             },
             "randomMin": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 4.0,
+                "y": 4.0,
+                "z": 4.0
             },
-            "valueType": 0
+            "valueType": 1
         },
         "startTextureAlphaReference": {
             "constant": 0.0,
@@ -299,10 +299,10 @@
             },
             "randomMin": {
                 "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "y": 0.5,
+                "z": 0.5
             },
-            "valueType": 0
+            "valueType": 1
         },
         "startUVTranslation": {
             "constant": {
@@ -324,7 +324,7 @@
         },
         "targetColor": {
             "constant": {
-                "a": 1.0,
+                "a": 0.21568627655506134,
                 "b": 1.0,
                 "g": 1.0,
                 "r": 1.0
@@ -444,21 +444,21 @@
         },
         "targetScale": {
             "constant": {
-                "x": 4.0,
-                "y": 4.0,
-                "z": 4.0
+                "x": 1.0,
+                "y": 1.0,
+                "z": 5.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 6.0,
+                "y": 6.0,
+                "z": 6.0
             },
             "randomMin": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 5.0,
+                "y": 5.0,
+                "z": 5.0
             },
-            "valueType": 0
+            "valueType": 1
         },
         "targetTextureAlphaReference": {
             "constant": 0.0,
@@ -479,40 +479,40 @@
                 "z": 1.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 4.0,
+                "y": 4.0,
+                "z": 4.0
             },
             "randomMin": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
             },
-            "valueType": 0
+            "valueType": 1
         },
         "targetUVTranslation": {
             "constant": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": 0.4000000059604645,
+                "y": 0.4000000059604645,
                 "z": 0.0
             },
             "randomMax": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": 0.4000000059604645,
+                "y": 0.4000000059604645,
                 "z": 0.0
             },
             "randomMin": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": -0.4000000059604645,
+                "y": -0.4000000059604645,
                 "z": 0.0
             },
-            "valueType": 0
+            "valueType": 1
         }
     },
     "Private": {
-        "modelName_": "primitiveRing",
-        "name_": "expandingRing",
+        "modelName_": "crossPlane",
+        "name_": "dashGroundSmoke",
         "noiseTextureName_": "noise",
-        "textureName_": "gradationLine_0"
+        "textureName_": "smoke"
     }
 }

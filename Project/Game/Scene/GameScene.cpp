@@ -25,11 +25,16 @@ void GameScene::Load(Asset* asset) {
 	asset->LoadTexture("white");
 	asset->LoadTexture("monsterBall");
 	asset->LoadTexture("noise");
+	asset->LoadTexture("noise1");
+	asset->LoadTexture("noise2");
 	asset->LoadTexture("smallCircle");
 	asset->LoadTexture("spark");
 	asset->LoadTexture("gradationLine_1");
 	asset->LoadTexture("gradationLine_0");
 	asset->LoadTexture("effectCircle");
+	asset->LoadTexture("flashLlight");
+	asset->LoadTexture("groundEffect");
+	asset->LoadTexture("smoke");
 	// cubeMap、.dds
 	asset->LoadTexture("docklands_01_2k");
 
@@ -37,6 +42,11 @@ void GameScene::Load(Asset* asset) {
 	asset->LoadModel("cube");
 	asset->LoadModel("axis");
 	asset->LoadModel("billboardPlane");
+	asset->LoadModel("topLocalbillboardPlane");
+	asset->LoadModel("bottomLocalbillboardPlane");
+	asset->LoadModel("groundPlane");
+	asset->LoadModel("crossPlane");
+	asset->LoadModel("hitLine");
 
 	// player
 	asset->LoadModel("playerBody");

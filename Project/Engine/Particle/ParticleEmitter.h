@@ -127,6 +127,7 @@ struct ParticleGroup {
 			transferMaterials = std::move(other.transferMaterials);
 			transferMatrices = std::move(other.transferMatrices);
 			preEmitterPos = other.preEmitterPos;
+			parameter = std::move(other.parameter);
 			particles = std::move(other.particles);
 			other.numInstance = 0;
 		}

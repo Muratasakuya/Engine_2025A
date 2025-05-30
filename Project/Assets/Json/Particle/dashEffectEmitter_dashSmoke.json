@@ -3,18 +3,18 @@
         "Box": {
             "center": {
                 "x": 0.0,
-                "y": 0.0,
+                "y": 3.990000009536743,
                 "z": 0.0
             },
             "eulerRotate": {
                 "x": 0.0,
-                "y": 0.0,
+                "y": 3.140000104904175,
                 "z": 0.0
             },
             "size": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.009999999776482582,
+                "y": 0.009999999776482582,
+                "z": 0.009999999776482582
             }
         },
         "Cone": {
@@ -48,18 +48,18 @@
         "Sphere": {
             "center": {
                 "x": 0.0,
-                "y": 3.359999895095825,
+                "y": 0.0,
                 "z": 0.0
             },
-            "radius": 0.0
+            "radius": 0.20000000298023224
         },
-        "emitterShape": 0
+        "emitterShape": 2
     },
     "Enum": {
         "alphaReferenceEasingType": 0,
-        "billboardType": 1,
+        "billboardType": 0,
         "blendMode": 1,
-        "colorEasingType": 0,
+        "colorEasingType": 14,
         "edgeEasingType": 0,
         "edgeEmissionEasingType": 0,
         "emissionEasingType": 0,
@@ -114,7 +114,7 @@
             "valueType": 0
         },
         "lifeTime": {
-            "constant": 0.699999988079071,
+            "constant": 0.6209999918937683,
             "randomMax": 0.800000011920929,
             "randomMin": 0.800000011920929,
             "valueType": 0
@@ -138,10 +138,10 @@
         },
         "startColor": {
             "constant": {
-                "a": 0.5882353186607361,
-                "b": 0.3294117748737335,
-                "g": 0.31432273983955383,
-                "r": 0.003921573515981436
+                "a": 1.0,
+                "b": 0.5098039507865906,
+                "g": 0.1764705926179886,
+                "r": 0.06666667014360428
             },
             "randomMax": {
                 "a": 1.0,
@@ -258,9 +258,9 @@
         },
         "startScale": {
             "constant": {
-                "x": 0.25,
-                "y": 0.25,
-                "z": 0.25
+                "x": 1.0,
+                "y": 1.0,
+                "z": 0.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -324,10 +324,10 @@
         },
         "targetColor": {
             "constant": {
-                "a": 1.0,
-                "b": 0.3294117748737335,
-                "g": 0.2999523878097534,
-                "r": 0.003921573515981436
+                "a": 0.0,
+                "b": 0.5098039507865906,
+                "g": 0.1764705926179886,
+                "r": 0.06666667014360428
             },
             "randomMax": {
                 "a": 1.0,
@@ -444,9 +444,9 @@
         },
         "targetScale": {
             "constant": {
-                "x": 1.6399999856948853,
-                "y": 1.6399999856948853,
-                "z": 1.6399999856948853
+                "x": 8.0,
+                "y": 8.0,
+                "z": 1.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -511,8 +511,8 @@
     },
     "Private": {
         "modelName_": "billboardPlane",
-        "name_": "expandingCircle",
+        "name_": "dashSmoke",
         "noiseTextureName_": "noise",
-        "textureName_": "effectCircle"
+        "textureName_": "flashLlight"
     }
 }

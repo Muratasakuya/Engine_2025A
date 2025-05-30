@@ -1,0 +1,8 @@
+{
+    "FileType": "ParticleEmitter",
+    "particleNames": {
+        "0": "dashEffectEmitter_dashLineEffect.json",
+        "1": "dashEffectEmitter_dashSmoke.json",
+        "2": "dashEffectEmitter_dashGroundSmoke.json"
+    }
+}

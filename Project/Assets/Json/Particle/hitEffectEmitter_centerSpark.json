@@ -1,0 +1,518 @@
+{
+    "Emitter": {
+        "Box": {
+            "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "eulerRotate": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "size": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            }
+        },
+        "Cone": {
+            "baseRadius": 0.4000000059604645,
+            "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "eulerRotate": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "height": 1.0,
+            "topRadius": 0.800000011920929
+        },
+        "Hemisphere": {
+            "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "eulerRotate": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 0.20000000298023224
+        },
+        "Sphere": {
+            "center": {
+                "x": 0.0,
+                "y": 4.0,
+                "z": 0.0
+            },
+            "radius": 0.0
+        },
+        "emitterShape": 0
+    },
+    "Enum": {
+        "alphaReferenceEasingType": 0,
+        "billboardType": 1,
+        "blendMode": 1,
+        "colorEasingType": 0,
+        "edgeEasingType": 0,
+        "edgeEmissionEasingType": 0,
+        "emissionEasingType": 14,
+        "moveEasingType": 0,
+        "rotationEasingType": 0,
+        "scaleEasingType": 14,
+        "uvAdressMode": 0,
+        "uvRotationZEasingType": 0,
+        "uvScaleEasingType": 0,
+        "uvTranslationEasingType": 0
+    },
+    "FileType": "Particle",
+    "Flag": {
+        "interpolateEmit": false,
+        "isLoop": true,
+        "moveToDirection": false,
+        "reflectGround": false,
+        "useNoiseTexture": false,
+        "useScaledTime": false,
+        "useUVTransform": false
+    },
+    "Parameter": {
+        "emitCount": {
+            "constant": 1,
+            "randomMax": 1,
+            "randomMin": 1,
+            "valueType": 0
+        },
+        "frequency": 1.0,
+        "gravityDirection": {
+            "constant": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "randomMax": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "randomMin": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "valueType": 0
+        },
+        "gravityStrength": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "lifeTime": {
+            "constant": 0.33000001311302185,
+            "randomMax": 0.800000011920929,
+            "randomMin": 0.800000011920929,
+            "valueType": 0
+        },
+        "moveSpeed": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "reflectFace": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "restitution": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "startColor": {
+            "constant": {
+                "a": 1.0,
+                "b": 0.3294117748737335,
+                "g": 0.20000000298023224,
+                "r": 0.003921568859368563
+            },
+            "randomMax": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "randomMin": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "valueType": 0
+        },
+        "startEdgeColor": {
+            "constant": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "randomMax": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "randomMin": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "valueType": 0
+        },
+        "startEdgeEmissionColor": {
+            "constant": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "startEdgeEmissiveIntensity": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "startEdgeSize": {
+            "constant": 0.800000011920929,
+            "randomMax": 0.800000011920929,
+            "randomMin": 0.800000011920929,
+            "valueType": 0
+        },
+        "startEmissionColor": {
+            "constant": {
+                "x": 0.003921573515981436,
+                "y": 0.03409940376877785,
+                "z": 0.3294117748737335
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "startEmissiveIntensity": {
+            "constant": 24.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "startNoiseTextureAlphaReference": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "startRotationMultiplier": {
+            "constant": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMax": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMin": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "valueType": 0
+        },
+        "startScale": {
+            "constant": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "startTextureAlphaReference": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "startUVRotationZ": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "startUVScale": {
+            "constant": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "startUVTranslation": {
+            "constant": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMax": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMin": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "valueType": 0
+        },
+        "targetColor": {
+            "constant": {
+                "a": 0.47058823704719543,
+                "b": 0.3294117748737335,
+                "g": 0.2980392277240753,
+                "r": 0.003921568859368563
+            },
+            "randomMax": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "randomMin": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "valueType": 0
+        },
+        "targetEdgeColor": {
+            "constant": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "randomMax": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "randomMin": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "valueType": 0
+        },
+        "targetEdgeEmissionColor": {
+            "constant": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "targetEdgeEmissiveIntensity": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "targetEdgeSize": {
+            "constant": 0.800000011920929,
+            "randomMax": 0.800000011920929,
+            "randomMin": 0.800000011920929,
+            "valueType": 0
+        },
+        "targetEmissionColor": {
+            "constant": {
+                "x": 0.003921573515981436,
+                "y": 0.03409940376877785,
+                "z": 0.3294117748737335
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "targetEmissiveIntensity": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "targetNoiseTextureAlphaReference": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "targetRotationMultiplier": {
+            "constant": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMax": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMin": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "valueType": 0
+        },
+        "targetScale": {
+            "constant": {
+                "x": 6.0,
+                "y": 6.0,
+                "z": 6.0
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "targetTextureAlphaReference": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "targetUVRotationZ": {
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
+        },
+        "targetUVScale": {
+            "constant": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMax": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "randomMin": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "valueType": 0
+        },
+        "targetUVTranslation": {
+            "constant": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMax": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "randomMin": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "valueType": 0
+        }
+    },
+    "Private": {
+        "modelName_": "billboardPlane",
+        "name_": "centerSpark",
+        "noiseTextureName_": "noise",
+        "textureName_": "redCircle"
+    }
+}

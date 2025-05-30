@@ -70,6 +70,10 @@ void ParticleEmitter::Init(const Json& data, const std::string& name,
 
 					// 作成
 					CreateParticle(particleData);
+
+					// 同時発生をデフォにする
+					isAllEmit_ = true;
+					allEmitTime_ = 1.0f;
 				}
 			}
 		}
@@ -620,13 +624,14 @@ void ParticleEmitter::SelectParticle() {
 	}
 
 	for (int i = 0; i < static_cast<int>(particleGroups_.size()); ++i) {
-		const bool selected = (currentSelectIndex_.has_value() && currentSelectIndex_.value() == i);
-		if (ImGui::Selectable(particleGroups_[i].parameter.GetParticleName().c_str(), selected)) {
+
+		std::string label = particleGroups_[i].parameter.GetParticleName() + "##" + std::to_string(i);
+		bool selected = (currentSelectIndex_.has_value() && currentSelectIndex_.value() == i);
+		if (ImGui::Selectable(label.c_str(), selected)) {
 
 			currentSelectIndex_ = i;
 		}
 		if (selected) {
-
 			ImGui::SetItemDefaultFocus();
 		}
 	}
@@ -698,7 +703,7 @@ void ParticleEmitter::SaveEmitter() {
 				for (uint32_t index = 0; index < particleGroups_.size(); ++index) {
 
 					// particleの保存名を取得
-					particleNames[index] = particleGroups_[index].parameter.GetParticleName() + ".json";
+					particleNames[index] = std::string(emitterSave_.nameBuffer) + "_" + particleGroups_[index].parameter.GetParticleName() + ".json";
 
 					// particleを保存する
 					particleGroups_[index].parameter.SaveJson("Particle/" + particleNames[index]);
@@ -804,17 +809,7 @@ void ParticleEmitter::RemoveParticle() {
 
 			// vectorから削除
 			particleGroups_.erase(particleGroups_.begin() + removeIndex);
-
-			// インデックスを整理
-			if (particleGroups_.empty()) {
-
-				// 全削除されたので選択なし状態
-				currentSelectIndex_.reset();
-			} else {
-
-				const int newSize = static_cast<int>(particleGroups_.size());
-				currentSelectIndex_ = std::clamp(removeIndex, 0, newSize - 1);
-			}
+			currentSelectIndex_ = std::nullopt;
 		}
 	}
 }

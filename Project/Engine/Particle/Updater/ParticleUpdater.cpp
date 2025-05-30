@@ -56,7 +56,9 @@ void ParticleUpdater::UpdateScale(ParticleData& particle, [[maybe_unused]] const
 void ParticleUpdater::UpdateRotate(float deltaTime, ParticleData& particle, const ParticleParameter& parameter) {
 
 	// 進行方向に回転を設定する
-	if (parameter.moveToDirection && parameter.billboardType == ParticleBillboardType::None) {
+	if (parameter.moveToDirection &&
+		parameter.billboardType == ParticleBillboardType::None ||
+		parameter.billboardType == ParticleBillboardType::YAxis) {
 
 		// 進行方向を取得
 		Vector3 direction = particle.easedVelocity.Normalize();

@@ -30,16 +30,18 @@ PSOutput main(MSOutput input) {
 	// noiceTexture‚É‚æ‚épixelŠü‹pAedge”»’è
 	float4 edgeColor = float4(0.0f, 0.0f, 0.0f, 0.0f);
 		
-	if (ApplyNoiseDiscardAndEdge(id, transformUV, edgeColor)) {
+	if (material.useNoiseTexture == 1) {
+		if (ApplyNoiseDiscardAndEdge(id, transformUV, edgeColor)) {
 		
-		output.color = edgeColor;
-		// emissionˆ—
-		// ”­ŒõF
-		float3 emission = material.edgeEmissionColor * material.edgeEmissiveIntensity;
-		// emission‚ğ‰ÁZ
-		output.color.rgb += emission;
+			output.color = edgeColor;
+			// emissionˆ—
+			// ”­ŒõF
+			float3 emission = material.edgeEmissionColor * material.edgeEmissiveIntensity;
+			// emission‚ğ‰ÁZ
+			output.color.rgb += emission;
 		
-		return output;
+			return output;
+		}
 	}
 	
 	// textureColor‚Ìæ“¾Aalpha’l‚ÌpixelŠü‹p”»’è

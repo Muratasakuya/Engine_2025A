@@ -26,6 +26,8 @@ public:
 
 	//--------- accessor -----------------------------------------------------
 
+	void StartScreenShake() { isScreenShake_ = true; }
+
 	void SetTarget(const Transform3DComponent& target) { target_ = &target; }
 private:
 	//========================================================================
@@ -45,6 +47,11 @@ private:
 
 	float lerpRate_;      // 補間速度
 	Vector2 sensitivity_; // マウス感度
+
+	bool isScreenShake_;                 // 画面シェイク中かどうか
+	float screenShakeIntensity_ = 0.8f; // 画面シェイクの強度
+	float screenShakeDuration_ = 0.32f; // 画面シェイクの持続時間
+	float screenShakeTimer_ = 0.0f;     // シェイクの経過時間
 	
 	// editor
 	bool isDebugMode_;
@@ -57,6 +64,8 @@ private:
 	// update
 	void Move();
 	void UpdateMatrix();
+
+	void UpdateScreenShake();
 
 	// json
 	void ApplyJson();

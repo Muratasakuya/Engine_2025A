@@ -62,10 +62,10 @@
         "colorEasingType": 0,
         "edgeEasingType": 0,
         "edgeEmissionEasingType": 0,
-        "emissionEasingType": 0,
+        "emissionEasingType": 14,
         "moveEasingType": 0,
         "rotationEasingType": 0,
-        "scaleEasingType": 14,
+        "scaleEasingType": 23,
         "uvAdressMode": 0,
         "uvRotationZEasingType": 0,
         "uvScaleEasingType": 0,
@@ -114,7 +114,7 @@
             "valueType": 0
         },
         "lifeTime": {
-            "constant": 0.47999998927116394,
+            "constant": 0.40299999713897705,
             "randomMax": 0.800000011920929,
             "randomMin": 0.800000011920929,
             "valueType": 0
@@ -138,7 +138,7 @@
         },
         "startColor": {
             "constant": {
-                "a": 0.12941177189350128,
+                "a": 1.0,
                 "b": 0.5686274766921997,
                 "g": 0.4941176474094391,
                 "r": 0.0235294122248888
@@ -210,9 +210,9 @@
         },
         "startEmissionColor": {
             "constant": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.04142981767654419,
+                "y": 0.45752042531967163,
+                "z": 0.7608535289764404
             },
             "randomMax": {
                 "x": 1.0,
@@ -227,7 +227,7 @@
             "valueType": 0
         },
         "startEmissiveIntensity": {
-            "constant": 0.0,
+            "constant": 12.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
@@ -396,9 +396,9 @@
         },
         "targetEmissionColor": {
             "constant": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.0014705557841807604,
+                "y": 0.3995598256587982,
+                "z": 0.4996320605278015
             },
             "randomMax": {
                 "x": 1.0,
@@ -444,9 +444,9 @@
         },
         "targetScale": {
             "constant": {
-                "x": 6.0,
-                "y": 6.0,
-                "z": 6.0
+                "x": 12.0,
+                "y": 12.0,
+                "z": 12.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -513,6 +513,6 @@
         "modelName_": "groundPlane",
         "name_": "spreadCircle",
         "noiseTextureName_": "noise",
-        "textureName_": "effectCircle"
+        "textureName_": "redCircle"
     }
 }

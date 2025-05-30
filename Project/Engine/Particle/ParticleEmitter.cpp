@@ -94,7 +94,7 @@ void ParticleEmitter::Update(const Matrix4x4& billboardMatrix, bool useGame) {
 	}
 
 	// 全てのparticleの発生処理
-	UpdateAllParticle();
+	UpdateAllParticle(useGame);
 
 	// 各particleのemitterを描画
 	DrawParticleEmitters(useGame);
@@ -456,7 +456,12 @@ void ParticleEmitter::UpdateParticles(const Matrix4x4& billboardMatrix, bool use
 	}
 }
 
-void ParticleEmitter::UpdateAllParticle() {
+void ParticleEmitter::UpdateAllParticle(bool useGame) {
+
+	if (useGame) {
+		return;
+	}
+
 #ifdef _DEBUG
 	if (!isAllEmit_) {
 		return;

@@ -118,11 +118,11 @@ void MaterialComponent::FromJson(const Json& data) {
 	material.enableHalfLambert = data["enableHalfLambert"];
 	material.enableBlinnPhongReflection = data["enableBlinnPhongReflection"];
 	material.enableBlinnPhongReflection = data["enableBlinnPhongReflection"];
-	material.enableImageBasedLighting = JsonAdapter::GetValue<bool>(data, "enableImageBasedLighting");
+	//material.enableImageBasedLighting = JsonAdapter::GetValue<bool>(data, "enableImageBasedLighting");
 	material.phongRefShininess = data["phongRefShininess"];
 	material.specularColor = JsonAdapter::ToObject<Vector3>(data["specularColor"]);
 	material.shadowRate = data["shadowRate"];
-	material.environmentCoefficient = JsonAdapter::GetValue<float>(data, "environmentCoefficient");
+	//material.environmentCoefficient = JsonAdapter::GetValue<float>(data, "environmentCoefficient");
 
 	// UV
 	uvTransform.scale = JsonAdapter::ToObject<Vector3>(data["uvScale"]);

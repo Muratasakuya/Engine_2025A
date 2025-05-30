@@ -14,6 +14,7 @@
 // front
 class BasePlayerParts;
 class FollowCamera;
+class ParticleSystem;
 
 //============================================================================
 //	IPlayerBehavior class
@@ -24,7 +25,7 @@ public:
 	//	public Methods
 	//========================================================================
 
-	IPlayerBehavior() = default;
+	IPlayerBehavior();
 	virtual ~IPlayerBehavior() = default;
 
 	// 処理実行
@@ -47,6 +48,7 @@ protected:
 	const float itemWidth_ = 224.0f;
 
 	FollowCamera* followCamera_;
+	ParticleSystem* particleSystem_;
 
 	// behaviorごとのjsonのkey
 	const std::string waitBehaviorJsonKey_ = "BehaviorType_Wait";
@@ -57,6 +59,8 @@ protected:
 	const std::string attack2ndBehaviorJsonKey_ = "BehaviorType_Attack_2nd";
 	const std::string attack3rdBehaviorJsonKey_ = "BehaviorType_Attack_3rd";
 	const std::string parryBehaviorJsonKey_ = "BehaviorType_Parry";
+
+	bool emitParticle_ = false;
 
 	//--------- functions ----------------------------------------------------
 

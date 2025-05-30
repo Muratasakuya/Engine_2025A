@@ -4,10 +4,16 @@
 //	include
 //============================================================================
 #include <Engine/Input/Input.h>
+#include <Engine/Particle/ParticleSystem.h>
 
 //============================================================================
 //	IPlayerBehavior classMethods
 //============================================================================
+
+IPlayerBehavior::IPlayerBehavior() {
+
+	particleSystem_ = ParticleSystem::GetInstance();
+}
 
 Quaternion IPlayerBehavior::CalRotationAxisAngle(const Vector3& rotationAngle) {
 

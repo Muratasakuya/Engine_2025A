@@ -3,8 +3,8 @@
         "Box": {
             "center": {
                 "x": 0.0,
-                "y": 0.5,
-                "z": -6.0
+                "y": 0.07999999821186066,
+                "z": 0.0
             },
             "eulerRotate": {
                 "x": 0.0,
@@ -12,17 +12,17 @@
                 "z": 0.0
             },
             "size": {
-                "x": 3.7799999713897705,
-                "y": 0.36000001430511475,
-                "z": 1.0
+                "x": 48.0,
+                "y": 5.139999866485596,
+                "z": 48.0
             }
         },
         "Cone": {
-            "baseRadius": 0.7200000286102295,
+            "baseRadius": 0.4000000059604645,
             "center": {
                 "x": 0.0,
-                "y": 0.550000011920929,
-                "z": -5.989999771118164
+                "y": 0.0,
+                "z": 0.0
             },
             "eulerRotate": {
                 "x": 0.0,
@@ -30,7 +30,7 @@
                 "z": 0.0
             },
             "height": 1.0,
-            "topRadius": 7.059999942779541
+            "topRadius": 0.800000011920929
         },
         "Hemisphere": {
             "center": {
@@ -48,22 +48,22 @@
         "Sphere": {
             "center": {
                 "x": 0.0,
-                "y": 0.5,
-                "z": -6.0
+                "y": 0.0,
+                "z": 0.0
             },
             "radius": 0.20000000298023224
         },
-        "emitterShape": 3
+        "emitterShape": 2
     },
     "Enum": {
         "alphaReferenceEasingType": 0,
         "billboardType": 1,
         "blendMode": 1,
-        "colorEasingType": 5,
-        "edgeEasingType": 14,
+        "colorEasingType": 0,
+        "edgeEasingType": 0,
         "edgeEmissionEasingType": 0,
         "emissionEasingType": 0,
-        "moveEasingType": 14,
+        "moveEasingType": 0,
         "rotationEasingType": 0,
         "scaleEasingType": 0,
         "uvAdressMode": 0,
@@ -76,23 +76,23 @@
         "interpolateEmit": false,
         "isLoop": true,
         "moveToDirection": false,
-        "reflectGround": true,
-        "useNoiseTexture": true,
+        "reflectGround": false,
+        "useNoiseTexture": false,
         "useScaledTime": false,
-        "useUVTransform": false
+        "useUVTransform": true
     },
     "Parameter": {
         "emitCount": {
-            "constant": 24,
+            "constant": 8,
             "randomMax": 1,
             "randomMin": 1,
             "valueType": 0
         },
-        "frequency": 1.0,
+        "frequency": 0.10000000149011612,
         "gravityDirection": {
             "constant": {
                 "x": 0.0,
-                "y": -1.0,
+                "y": 1.0,
                 "z": 0.0
             },
             "randomMax": {
@@ -108,19 +108,19 @@
             "valueType": 0
         },
         "gravityStrength": {
-            "constant": 64.0,
+            "constant": 4.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
         },
         "lifeTime": {
-            "constant": 1.0,
+            "constant": 0.5989999771118164,
             "randomMax": 0.800000011920929,
             "randomMin": 0.800000011920929,
             "valueType": 0
         },
         "moveSpeed": {
-            "constant": 32.0,
+            "constant": 0.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
@@ -131,17 +131,17 @@
             "z": 0.0
         },
         "restitution": {
-            "constant": 0.8410000205039978,
-            "randomMax": 0.800000011920929,
-            "randomMin": 0.4000000059604645,
-            "valueType": 1
+            "constant": 0.0,
+            "randomMax": 0.0,
+            "randomMin": 0.0,
+            "valueType": 0
         },
         "startColor": {
             "constant": {
-                "a": 1.0,
-                "b": 0.448123574256897,
-                "g": 0.19167935848236084,
-                "r": 0.019454969093203545
+                "a": 0.1568627506494522,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
             },
             "randomMax": {
                 "a": 1.0,
@@ -160,9 +160,9 @@
         "startEdgeColor": {
             "constant": {
                 "a": 1.0,
-                "b": 0.4370860457420349,
-                "g": 0.12059582024812698,
-                "r": 0.06078679487109184
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
             },
             "randomMax": {
                 "a": 1.0,
@@ -180,9 +180,9 @@
         },
         "startEdgeEmissionColor": {
             "constant": {
-                "x": 0.06078679487109184,
-                "y": 0.12059582024812698,
-                "z": 0.4370860457420349
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -197,22 +197,22 @@
             "valueType": 0
         },
         "startEdgeEmissiveIntensity": {
-            "constant": 4.0,
+            "constant": 0.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
         },
         "startEdgeSize": {
-            "constant": 0.03400000184774399,
+            "constant": 0.800000011920929,
             "randomMax": 0.800000011920929,
             "randomMin": 0.800000011920929,
             "valueType": 0
         },
         "startEmissionColor": {
             "constant": {
-                "x": 0.018975764513015747,
-                "y": 0.09186271578073502,
-                "z": 0.4775570034980774
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -227,7 +227,7 @@
             "valueType": 0
         },
         "startEmissiveIntensity": {
-            "constant": 4.0,
+            "constant": 0.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
@@ -258,21 +258,21 @@
         },
         "startScale": {
             "constant": {
-                "x": 0.23999999463558197,
-                "y": 0.23999999463558197,
-                "z": 0.23999999463558197
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 5.0,
+                "y": 5.0,
+                "z": 5.0
             },
             "randomMin": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 4.0,
+                "y": 4.0,
+                "z": 4.0
             },
-            "valueType": 0
+            "valueType": 1
         },
         "startTextureAlphaReference": {
             "constant": 0.0,
@@ -299,10 +299,10 @@
             },
             "randomMin": {
                 "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "y": 0.5,
+                "z": 0.5
             },
-            "valueType": 0
+            "valueType": 1
         },
         "startUVTranslation": {
             "constant": {
@@ -324,10 +324,10 @@
         },
         "targetColor": {
             "constant": {
-                "a": 0.0,
-                "b": 0.4470588266849518,
-                "g": 0.15294118225574493,
-                "r": 0.06666667014360428
+                "a": 0.21568627655506134,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
             },
             "randomMax": {
                 "a": 1.0,
@@ -346,9 +346,9 @@
         "targetEdgeColor": {
             "constant": {
                 "a": 1.0,
-                "b": 0.4370860457420349,
-                "g": 0.12059582024812698,
-                "r": 0.06078679487109184
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
             },
             "randomMax": {
                 "a": 1.0,
@@ -366,9 +366,9 @@
         },
         "targetEdgeEmissionColor": {
             "constant": {
-                "x": 0.06078679487109184,
-                "y": 0.12059582024812698,
-                "z": 0.4370860457420349
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -383,22 +383,22 @@
             "valueType": 0
         },
         "targetEdgeEmissiveIntensity": {
-            "constant": 8.0,
+            "constant": 0.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
         },
         "targetEdgeSize": {
-            "constant": 0.12300000339746475,
+            "constant": 0.800000011920929,
             "randomMax": 0.800000011920929,
             "randomMin": 0.800000011920929,
             "valueType": 0
         },
         "targetEmissionColor": {
             "constant": {
-                "x": 0.018975764513015747,
-                "y": 0.09186271578073502,
-                "z": 0.4775570034980774
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
             },
             "randomMax": {
                 "x": 1.0,
@@ -413,13 +413,13 @@
             "valueType": 0
         },
         "targetEmissiveIntensity": {
-            "constant": 8.0,
+            "constant": 0.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
         },
         "targetNoiseTextureAlphaReference": {
-            "constant": 1.0,
+            "constant": 0.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
@@ -444,21 +444,21 @@
         },
         "targetScale": {
             "constant": {
-                "x": 0.23999999463558197,
-                "y": 0.23999999463558197,
-                "z": 0.23999999463558197
+                "x": 1.0,
+                "y": 1.0,
+                "z": 5.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 6.0,
+                "y": 6.0,
+                "z": 6.0
             },
             "randomMin": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 5.0,
+                "y": 5.0,
+                "z": 5.0
             },
-            "valueType": 0
+            "valueType": 1
         },
         "targetTextureAlphaReference": {
             "constant": 0.0,
@@ -479,40 +479,40 @@
                 "z": 1.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 4.0,
+                "y": 4.0,
+                "z": 4.0
             },
             "randomMin": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
             },
-            "valueType": 0
+            "valueType": 1
         },
         "targetUVTranslation": {
             "constant": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": 0.4000000059604645,
+                "y": 0.4000000059604645,
                 "z": 0.0
             },
             "randomMax": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": 0.4000000059604645,
+                "y": 0.4000000059604645,
                 "z": 0.0
             },
             "randomMin": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": -0.4000000059604645,
+                "y": -0.4000000059604645,
                 "z": 0.0
             },
-            "valueType": 0
+            "valueType": 1
         }
     },
     "Private": {
-        "modelName_": "billboardPlane",
-        "name_": "dispersionFrontParticle",
+        "modelName_": "crossPlane",
+        "name_": "dashGroundSmoke",
         "noiseTextureName_": "noise",
-        "textureName_": "circle"
+        "textureName_": "smoke"
     }
 }

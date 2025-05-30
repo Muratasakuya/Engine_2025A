@@ -83,7 +83,7 @@
     },
     "Parameter": {
         "emitCount": {
-            "constant": 24,
+            "constant": 32,
             "randomMax": 1,
             "randomMin": 1,
             "valueType": 0
@@ -120,7 +120,7 @@
             "valueType": 1
         },
         "moveSpeed": {
-            "constant": 18.0,
+            "constant": 24.0,
             "randomMax": 0.0,
             "randomMin": 0.0,
             "valueType": 0
@@ -449,8 +449,8 @@
                 "z": 2.0
             },
             "randomMax": {
-                "x": 1.0,
-                "y": 1.0,
+                "x": 1.2000000476837158,
+                "y": 1.2000000476837158,
                 "z": 0.4000000059604645
             },
             "randomMin": {

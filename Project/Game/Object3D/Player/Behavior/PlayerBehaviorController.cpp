@@ -4,6 +4,7 @@
 //	include
 //============================================================================
 #include <Engine/Input/Input.h>
+#include <Engine/Particle/ParticleSystem.h>
 #include <Game/Time/GameTimer.h>
 
 //============================================================================
@@ -38,6 +39,16 @@ void PlayerBehaviorController::Update() {
 
 	// behaviourを設定する
 	BehaviourRequest();
+
+	// particleを常に更新する
+	ParticleSystem* particleSystem = ParticleSystem::GetInstance();
+
+	// ground
+	particleSystem->UpdateEmitter("groundEffectEmitter");
+	// hitEffect
+	particleSystem->UpdateEmitter("hitEffectEmitter");
+	// dash
+	particleSystem->UpdateEmitter("dashEffectEmitter");
 }
 
 void PlayerBehaviorController::UpdateMove() {

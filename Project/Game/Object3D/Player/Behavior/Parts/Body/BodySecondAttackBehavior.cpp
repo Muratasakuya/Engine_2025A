@@ -4,6 +4,7 @@
 //	include
 //============================================================================
 #include <Game/Object3D/Player/Parts/Base/BasePlayerParts.h>
+#include <Engine/Particle/ParticleSystem.h>
 
 //============================================================================
 //	BodySecondAttackBehavior classMethods
@@ -65,6 +66,16 @@ void BodySecondAttackBehavior::UpdateFrontLeftStep(BasePlayerParts* parts) {
 
 		// 状態を設定
 		currentState_ = State::FrontLeftStep;
+
+		startDirection_ = parts->GetTransform().GetForward();
+
+		// particleを発生させる
+		Vector3 effectPos = parts->GetTransform().translation;
+		effectPos += startDirection_ * 6.0f;
+		effectPos.y = 2.0f;
+		particleSystem_->SetTranslate("hitEffectEmitter", effectPos);
+		particleSystem_->Emit("hitEffectEmitter");
+		emitParticle_ = true;
 	}
 
 	if (moveFrontLeft_.moveAnimation->IsFinished()) {
@@ -88,6 +99,14 @@ void BodySecondAttackBehavior::UpdateFrontRightStep(BasePlayerParts* parts) {
 
 			// 状態を設定
 			currentState_ = State::FrontRightStep;
+
+			// particleを発生させる
+			Vector3 effectPos = parts->GetTransform().translation;
+			effectPos += startDirection_ * 6.0f;
+			effectPos.y = 2.0f;
+			particleSystem_->SetTranslate("hitEffectEmitter", effectPos);
+			particleSystem_->Emit("hitEffectEmitter");
+			emitParticle_ = true;
 		}
 	}
 
@@ -112,6 +131,14 @@ void BodySecondAttackBehavior::UpdateReturnCenterStep(BasePlayerParts* parts) {
 
 			// 状態を設定
 			currentState_ = State::ReturnCenterStep;
+
+			// particleを発生させる
+			Vector3 effectPos = parts->GetTransform().translation;
+			effectPos += startDirection_ * 6.0f;
+			effectPos.y = 2.0f;
+			particleSystem_->SetTranslate("hitEffectEmitter", effectPos);
+			particleSystem_->Emit("hitEffectEmitter");
+			emitParticle_ = true;
 		}
 	}
 

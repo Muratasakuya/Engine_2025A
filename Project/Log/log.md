@@ -18,7 +18,6 @@ EngineInformation:     load texture: flashLlight
 EngineInformation:     load texture: groundEffect
 EngineInformation:     load texture: smoke
 EngineInformation:     load texture: docklands_01_2k
-EngineInformation:     load texture: BaseColor_Cube
 EngineInformation:     load model: cube
 EngineInformation:     load texture: axis
 EngineInformation:     load model: axis

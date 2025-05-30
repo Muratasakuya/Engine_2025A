@@ -59,13 +59,13 @@
         "alphaReferenceEasingType": 0,
         "billboardType": 0,
         "blendMode": 1,
-        "colorEasingType": 14,
+        "colorEasingType": 5,
         "edgeEasingType": 0,
         "edgeEmissionEasingType": 0,
         "emissionEasingType": 0,
         "moveEasingType": 0,
         "rotationEasingType": 0,
-        "scaleEasingType": 14,
+        "scaleEasingType": 1,
         "uvAdressMode": 0,
         "uvRotationZEasingType": 0,
         "uvScaleEasingType": 0,
@@ -114,7 +114,7 @@
             "valueType": 0
         },
         "lifeTime": {
-            "constant": 0.6209999918937683,
+            "constant": 0.4000000059604645,
             "randomMax": 0.800000011920929,
             "randomMin": 0.800000011920929,
             "valueType": 0
@@ -138,7 +138,7 @@
         },
         "startColor": {
             "constant": {
-                "a": 1.0,
+                "a": 0.5882353186607361,
                 "b": 0.5098039507865906,
                 "g": 0.1764705926179886,
                 "r": 0.06666667014360428

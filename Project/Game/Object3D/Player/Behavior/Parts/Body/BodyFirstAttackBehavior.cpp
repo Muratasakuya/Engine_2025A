@@ -4,6 +4,7 @@
 //	include
 //============================================================================
 #include <Game/Object3D/Player/Parts/Base/BasePlayerParts.h>
+#include <Engine/Particle/ParticleSystem.h>
 
 //============================================================================
 //	BodyFirstAttackBehavior classMethods
@@ -73,6 +74,8 @@ void BodyFirstAttackBehavior::UpdateBackLeftRotation(BasePlayerParts* parts) {
 
 			// 開始時の回転を記録
 			startRotation_ = parts->GetTransform().rotation;
+
+			startDirection_ = parts->GetTransform().GetForward();
 		}
 	}
 
@@ -92,6 +95,15 @@ void BodyFirstAttackBehavior::UpdateForwardRightShift(BasePlayerParts* parts) {
 
 			// animation開始
 			forwardRightShift_->Start();
+
+			// particleを発生させる
+			// effectを発生させる
+			Vector3 effectPos = parts->GetTransform().translation;
+			effectPos += startDirection_ * 6.0f;
+			effectPos.y = 2.0f;
+			particleSystem_->SetTranslate("hitEffectEmitter", effectPos);
+			particleSystem_->Emit("hitEffectEmitter");
+			emitParticle_ = true;
 		}
 
 		// 値を補間

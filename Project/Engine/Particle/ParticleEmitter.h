@@ -235,7 +235,7 @@ private:
 
 	// 全てのparticleを同時に発生させる
 	void EmitAllParticle();
-	void UpdateAllParticle();
+	void UpdateAllParticle(bool useGame);
 
 	// 作成処理
 	// editorから

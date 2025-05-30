@@ -63,8 +63,8 @@ void GameScene::CreatePrimitive(Asset* asset) {
 	// Ringを作成してexportする
 	{
 		const uint32_t kRingDivide = 32;
-		const float kOuterRadius = 1.0f;
-		const float kInnerRadius = 0.2f;
+		const float kOuterRadius = 0.4f;
+		const float kInnerRadius = 0.8f;
 		const float radianPerDivide = 2.0f * pi / static_cast<float>(kRingDivide);
 
 		std::vector<MeshVertex> vertices;
@@ -214,6 +214,11 @@ void GameScene::Init(
 	// primitive作成
 	CreatePrimitive(asset);
 
+	// particle
+	ParticleSystem::GetInstance()->LoadEmitter("fieldEffectEmitter", "fieldEffectEmitter");
+	ParticleSystem::GetInstance()->LoadEmitter("hitEffectEmitter", "hitEffectEmitter");
+	ParticleSystem::GetInstance()->LoadEmitter("dashEffectEmitter", "dashEffectEmitter");
+
 	//========================================================================
 	//	postProcess
 	//========================================================================
@@ -261,6 +266,14 @@ void GameScene::Init(
 	material->front().material.uvTransform = Matrix4x4::MakeAffineMatrix(Vector3(24.0f, 24.0f, 0.0f),
 		Vector3::AnyInit(0.0f), Vector3::AnyInit(0.0f));
 	material->front().material.shadowRate = 1.0f;
+
+	id = ECSManager::GetInstance()->CreateObject3D("cube", "debugEnemy", "Boss");
+	auto enemyTransform = ECSManager::GetInstance()->GetComponent<Transform3DComponent>(id);
+	enemyTransform->translation.y = 2.0f;
+	enemyTransform->scale = Vector3::AnyInit(2.0f);
+
+	auto enemyMaterial = ECSManager::GetInstance()->GetComponent<MaterialComponent, true>(id);
+	enemyMaterial->front().material.color = Color(0.8f, 0.8f, 0.8f, 0.8f);
 }
 
 void GameScene::Update([[maybe_unused]] SceneManager* sceneManager) {
@@ -268,6 +281,10 @@ void GameScene::Update([[maybe_unused]] SceneManager* sceneManager) {
 	followCamera_->Update();
 
 	player_->Update();
+
+	// particleの更新処理
+	ParticleSystem::GetInstance()->FrequencyEmit("fieldEffectEmitter");
+	ParticleSystem::GetInstance()->UpdateEmitter("fieldEffectEmitter");
 }
 
 void GameScene::ImGui() {

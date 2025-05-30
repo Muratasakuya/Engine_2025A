@@ -5,7 +5,9 @@
 //============================================================================
 #include <Engine/Input/Input.h>
 #include <Engine/Config.h>
+#include <Game/Time/GameTimer.h>
 #include <Lib/Adapter/JsonAdapter.h>
+#include <Lib/Adapter/RandomGenerator.h>
 
 //============================================================================
 //	FollowCamera classMethods
@@ -36,6 +38,9 @@ void FollowCamera::Update() {
 
 	// 追従処理
 	Move();
+
+	// 画面シェイク処理
+	UpdateScreenShake();
 
 	// 行列更新
 	UpdateMatrix();
@@ -113,6 +118,46 @@ void FollowCamera::UpdateMatrix() {
 
 	// billboardMatrixを計算
 	BaseCamera::CalBillboardMatrix();
+}
+
+void FollowCamera::UpdateScreenShake() {
+
+	// Playerが敵にダメージを与えた時
+	if (isScreenShake_) {
+
+		screenShakeTimer_ += GameTimer::GetScaledDeltaTime();
+
+		// シェイクの残り時間を計算
+		float remainingTime = screenShakeDuration_ - screenShakeTimer_;
+		if (remainingTime > 0.0f) {
+
+			float dampingFactor = remainingTime / screenShakeDuration_;
+			float intensity = screenShakeIntensity_ * dampingFactor;
+
+			float offsetX = RandomGenerator::Generate(-1.0f, 1.0f) * intensity;
+			float offsetY = RandomGenerator::Generate(-1.0f, 1.0f) * intensity * 4.0f;
+			float offsetZ = RandomGenerator::Generate(-1.0f, 1.0f) * intensity;
+
+			Vector3 forward = Vector3(
+				std::cos(transform_.rotation.y) * cos(transform_.rotation.x),
+				std::sin(transform_.rotation.x),
+				std::sin(transform_.rotation.y) * cos(transform_.rotation.x)
+			);
+
+			Vector3 right = Vector3(
+				std::cos(transform_.rotation.y + std::numbers::pi_v<float> / 2.0f),
+				0,
+				std::sin(transform_.rotation.y + std::numbers::pi_v<float> / 2.0f));
+
+			transform_.translation = transform_.translation + forward * offsetZ + right * offsetX;
+			transform_.translation.y += offsetY;
+		} else {
+
+			// シェイク終了
+			isScreenShake_ = false;
+			screenShakeTimer_ = 0.0f;
+		}
+	}
 }
 
 void FollowCamera::ImGui() {

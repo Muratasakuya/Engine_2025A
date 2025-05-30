@@ -83,6 +83,9 @@ private:
 	// 右前行った後に左前に行って正面に戻る
 	std::unique_ptr<SimpleAnimation<Vector3>> returnCenterRotation_;
 
+	// particle
+	Vector3 startDirection_;
+
 	//--------- functions ----------------------------------------------------
 
 	void UpdateFrontLeftStep(BasePlayerParts* parts);

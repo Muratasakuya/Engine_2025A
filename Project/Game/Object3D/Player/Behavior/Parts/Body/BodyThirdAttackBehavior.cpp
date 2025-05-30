@@ -4,6 +4,7 @@
 //	include
 //============================================================================
 #include <Engine/Renderer/LineRenderer.h>
+#include <Engine/Particle/ParticleSystem.h>
 #include <Game/Camera/FollowCamera.h>
 #include <Game/Object3D/Player/Parts/Base/BasePlayerParts.h>
 
@@ -43,6 +44,9 @@ BodyThirdAttackBehavior::BodyThirdAttackBehavior(
 
 	// keyframeの初期化
 	InitCatmullRom();
+
+	// particle読み込み
+	particleSystem_->LoadEmitter("groundEffectEmitter", "groundEffectEmitter");
 }
 
 void BodyThirdAttackBehavior::Execute(BasePlayerParts* parts) {
@@ -236,6 +240,21 @@ void BodyThirdAttackBehavior::SecondHalfUpdateRotation(BasePlayerParts* parts) {
 	}
 
 	if (rotationAngleZ_->IsFinished()) {
+
+		if (!emitParticle_) {
+
+			Vector3 forwardDirection = parts->GetTransform().GetForward();
+
+			// effectを発生させる
+			Vector3 effectPos = parts->GetTransform().translation;
+			effectPos.y = 0.5f;
+			particleSystem_->SetTranslate("groundEffectEmitter", effectPos);
+			particleSystem_->Emit("groundEffectEmitter");
+			emitParticle_ = true;
+
+			// 画面シェイク処理
+			followCamera_->StartScreenShake();
+		}
 		return;
 	}
 
@@ -259,6 +278,7 @@ void BodyThirdAttackBehavior::Reset() {
 	rotationAngleZ_->Reset();
 	moveWaitTimer_ = 0.0f;
 	enableMoveFront_ = false;
+	emitParticle_ = false;
 }
 
 void BodyThirdAttackBehavior::ImGui() {

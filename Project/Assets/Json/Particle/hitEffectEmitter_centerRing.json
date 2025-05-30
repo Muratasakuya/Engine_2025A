@@ -65,7 +65,7 @@
         "emissionEasingType": 0,
         "moveEasingType": 0,
         "rotationEasingType": 0,
-        "scaleEasingType": 14,
+        "scaleEasingType": 13,
         "uvAdressMode": 0,
         "uvRotationZEasingType": 0,
         "uvScaleEasingType": 0,
@@ -444,8 +444,8 @@
         },
         "targetScale": {
             "constant": {
-                "x": 3.200000047683716,
-                "y": 3.200000047683716,
+                "x": 2.0,
+                "y": 2.0,
                 "z": 2.0
             },
             "randomMax": {

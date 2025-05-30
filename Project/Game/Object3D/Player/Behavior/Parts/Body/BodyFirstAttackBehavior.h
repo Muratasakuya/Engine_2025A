@@ -49,6 +49,9 @@ private:
 	// 正面に向かせる(右重心にできるといい)
 	std::unique_ptr<SimpleAnimation<Vector3>> forwardRightShift_;
 
+	// particle
+	Vector3 startDirection_;
+
 	//--------- functions ----------------------------------------------------
 
 	void UpdateMoveStraight(BasePlayerParts* parts);

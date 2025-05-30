@@ -5,6 +5,7 @@
 //============================================================================
 #include <Game/Camera/FollowCamera.h>
 #include <Game/Object3D/Player/Parts/Base/BasePlayerParts.h>
+#include <Engine/Particle/ParticleSystem.h>
 
 //============================================================================
 //	BodyDashBehavior classMethods
@@ -43,6 +44,15 @@ void BodyDashBehavior::UpdateDash(BasePlayerParts* parts) {
 		// 補間処理を開始
 		speed_ = speedLerpValue_->move_.start;
 		speedLerpValue_->Start();
+
+		// particleを発生させる
+		Vector3 effectPos = parts->GetTransform().translation;
+		effectPos += parts->GetTransform().GetForward() * 6.4f;
+		effectPos.y = 1.0f;
+		particleSystem_->SetTranslate("dashEffectEmitter", effectPos);
+		particleSystem_->SetRotate("dashEffectEmitter", parts->GetTransform().rotation);
+		particleSystem_->Emit("dashEffectEmitter");
+		emitParticle_ = true;
 	}
 	// 値を補間
 	speedLerpValue_->LerpValue(speed_);
